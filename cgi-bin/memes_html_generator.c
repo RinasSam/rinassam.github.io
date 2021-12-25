@@ -56,7 +56,7 @@ int main()
     html_str = strtok(str, "\n");
     while(html_str != NULL)
     {
-    printf("<img src=\"memes/%s\">\n<br>\n<br>\n<hr>\n<br>\n", html_str);
+    printf("<img src=\"/memes/%s\">\n<br>\n<br>\n<br>\n<br>\n", html_str);
         html_str = strtok(NULL, "\n");
     }
     
