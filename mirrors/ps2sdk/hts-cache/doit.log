@@ -1,8 +1,0 @@
--q -%i -i https://ps2dev.github.io/ps2sdk/annotated.html https://ps2dev.github.io/ps2sdk/files.html https://ps2dev.github.io/ps2sdk/modules.html https://ps2dev.github.io/ps2sdk/pages.html https://ps2dev.github.io/ps2sdk/index -%L /srv/http/rinassam/mirrors/ps2sdk-url-list.txt -%e0 -C2 -%P -n -x -s2 -%s -%u -N0 -p7 -D -a -K0 -m0,0 -c8 -%k -Q -F "Mozilla/5.0 (X11; U; Linux i686; I; rv:33.0) Gecko/20100101 Firefox/33.0" -%F "<!-- Mirrored from %s%s by HTTraQt Website Copier/1.x [Karbofos 2012-2017] %s -->" -%l ua,en -O /srv/http/rinassam/mirrors/ps2sdk/ +*.ps +*.txt +*.rtf +*.docx +*.doc +*.pdf +*.tex +*.odt +*.wmv +*.wma +*.ac3 +*.vid +*.swf +*.qt +*.mkv +*.vob +*.wav +*.rm +*.mp2 +*.mp3 +*.asf +*.avi +*.mpeg +*.mpg +*.mov +*.7z +*.exe +*.rar +*.gz +*.tgz +*.tar +*.zip +*.bmp +*.tif +*.ico +*.jpeg +*.png +*.gif +*.jpg +*.css +*.js -ad.doubleclick.net/*
-File generated automatically on Sat, 25 Dec 2021 18:17:44, do NOT edit
-
-To update a mirror, just launch httrack without any parameters
-The existing cache will be used (and modified)
-To have other options, retype all parameters and launch HTTrack
-To continue an interrupted mirror, just launch httrack without any parameters
-
