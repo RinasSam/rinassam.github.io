@@ -26,3 +26,10 @@ body {
     color: white;
     background-color:#262d3a;
 }
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
