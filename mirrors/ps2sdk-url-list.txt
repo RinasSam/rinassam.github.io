@@ -1,0 +1,5 @@
+https://ps2dev.github.io/ps2sdk/annotated.html
+https://ps2dev.github.io/ps2sdk/files.html
+https://ps2dev.github.io/ps2sdk/modules.html
+https://ps2dev.github.io/ps2sdk/pages.html
+https://ps2dev.github.io/ps2sdk/index
