@@ -66,7 +66,7 @@ nav ul {
     padding: 0;
     width: 200px;
     background-color: #161a22;
-    height: 100%; /* Full height */
+    height: 80%; /* Full height */
     position: fixed; /* Make it stick, even on scroll */
     overflow: auto; /* Enable scrolling if the sidenav has too much content */
 
