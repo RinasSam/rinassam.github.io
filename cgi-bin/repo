@@ -1,0 +1,2 @@
+#!/bin/bash
+fossil server /home/rinassam/Devel/C/RinasSam_Website/RinasSam_Website.fossil --port 80 --nojail --skin /hone/rinassam/Devel/C/RinasSam_Website/skin
