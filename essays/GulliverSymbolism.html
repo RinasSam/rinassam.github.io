@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Symbolism in Gulliver's Travels</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="RinasSam" />
+<meta name="description" content="Odyssey Essay"
+ />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Symbolism in Gulliver's Travels</h1>
+<body style="background-color:#262d3a; color: white; margin-left: 225px;">
+
+<head>
+        <meta charset="UTF-8">
+        <title>Literature Essays</title>
+        <link rel="stylesheet" href="/styles.css">
+    </head>
+
+<nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/video_memes.html">Random Videos</a></li>
+                <li><a href="/rinassam_memes.html">RinasSam Memes</a></li>
+                <li><a href="/music.html">RinasSam Music</a></li>
+                <li class="active"><a href="/essays.html">Literature Essays</a></li>
+                <li><a href="/discord_bots.html">My Discord Bots</a></li>
+                <img src="/images/RinasSam Logo.png" alt="RinasSam Logo" align="left" height=169 border="0px">
+            </ul>
+</nav>
+<p>
+Literary works are often written for the reader to read and enjoy. However, they also are written for more important reasons: they teach lessons, present themes, and often criticize certain aspects of our real life world, either directly or indirectly. Many tales of the present and the past are written for this purpose. One of the most interesting ones is “Gulliver’s Travels” by Jonathan Swift. The book talks about a surgeon traveling around the world, visiting mysterious lands and meeting odd creatures and people. In this novel, Swift presents many themes and moral lessons, but what makes this book unique is the criticism of humans’ and their world in a satirical way. In order to achieve this, the author used a lot of symbolism to represents aspects of our life in extreme and absurd ways. Every race in the story symbolizes something in human life, be it a thought, an action, or a system. The major ones are the Lilliputians (and Blefuscuians), the Brobdingnags, the Laputans, and the Houyhnhnms.
+</p>
+
+<p>
+In his first journey, Gulliver meets the inhabitants of Lilliput, who are human-like creatures 
+quite small compared to Gulliver in size. The size of these people symbolizes their small mindedness and inferiority to other creatures (like Gulliver for instance). Their narrow understanding is the reason why they are very prideful. The Lilliputians always like to show off, to themselves, to each other, and to strangers and enemies alike, and they always boast of their large armies, their emperors, their level of intellect and superiority, etc. Their government system and way of life has flaws, but the Lilliputians are blind to this fact because of their foolishness. The exact same goes for their neighbors the Blefuscuians. In reality, they are not actually superior to one another or to anyone else. The two nations’ superior view of themselves over the other and their limited intellectual level have caused several disputes and wars between them. The most significant one (and ironically one of the dumbest reasons to have war) is a dispute over which side should the egg be broken from. Swift here criticizes humanity’s reasons for quarreling and going to wars with each other, and their small-mindedness to not be able to find long term peaceful solutions to simple problems. The small people of Lilliput and Blefuscu represent humanity’s excessive pride in itself, its claim of being superior to each other and to the other creatures, as well as its blindness to the many problems which exist within its society.
+</p>
+
+<p>
+After his encounter with the Lilliputians, Gulliver yet again goes on another journey and this time comes across the Brobdingnagians, which are humans who are gigantic in proportions (as is everything else in their island Brobdingnag). Their giant size magnifies all of their features, including the good and the bad. They represent the humans but examined in much greater detail. Under careful inspection, it can be determined that everyone, even if it doesn’t look like it, has flaws. Swift represents this by describing their appearance, noting how they have many features which are disgusting. Gulliver knows that if they were of equal size to him, he would not notice or care for these imperfections. The author used symbolism here to explain that whatever looks perfect (be it a person, a thing, a system, etc.) has flaws, which can sometimes only be found by careful inspection. Our world isn’t perfect and it will never be perfect, but the best we can do is to try to eliminate as many problems as we can by being open minded and wise creatures.
+</p>
+
+<p>
+In another voyage, Gulliver meets the odd race of Laputans who live on an island of the same name. The Laputans look a lot like humans, but they are mainly different in the way of life than in physical shape. They are quite fond of natural sciences, music, and mathematics. The one thing they value in life is seeking knowledge. This is why many of them start to wander off in thought when they are doing something not related to any of the things they like and thus need a person who continuously keeps them focused on the matter at hand. The Laputans also study and do experiments with no reason other than to obtain new information. They despise practical and old sciences and are incapable of actually studying and using what has already proven to be useful and instead focus on confusing themselves with new topics and studies that make no sense (for example, building a house from the roof down), which is why they do many things in bizarre ways (like constructing houses with no right angles). The result of this is shown directly below the island, where the conditions are miserable and agriculture is failing. The Laputans’ condition represent how seeking impractical knowledge or just seeking knowledge without putting it into use or learning from it has catastrophic impacts on society. When we seek knowledge for improving our lives, we should try to seek what is useful and learn from it.
+</p>
+
+<p>
+In his last travel, Gulliver encounters the Houyhnhnms, which are a race of horses with a high intellectual level. The Houyhnhnms were the most logical group of creatures that Gulliver has seen. They lead simple lives, they don’t lie, they don’t harm each other, they accept death as normal, they always try to be beneficial to their society, and they try to be as rational as possible. The Houyhnhnms’ life is in reality boring and the Houyhnhnms are not distinguishable from one another because they all have the same train of thought and behavior, which is why Swift gave them no names in the novel. The thing that makes humans different from them is emotions, selfishness, conflicts, and the sense of individuality which are all absent within the Houyhnhnms’ society. The Houyhnhnms represent the ideal intellectual creatures who live by common sense, help each other extensively, and lead simple, good lives that philosophers and many people think they can become. In reality, achieving such a thing is impossible because doing so means giving up on being human. This is the reason that Swift depicted these Houyhnhnms as horses, because they are not supposed to be humans. We are imperfect creatures, whose lives are governed by emotions and selfishness, which is why we are human. We must come to terms with ourselves that we can never be perfectly rational “perfect” creatures like the Houyhnhnms, because that is just not how our nature is.
+</p>
+
+<p>
+Symbolism is certainly a powerful literary device in the authors’ arsenal. When used correctly, it can convey lessons and criticisms effectively indirectly within the story. “Gulliver's Travels” has taught its readers a great deal of things and pointed out the many absurdities and flaws within our lives, systems, and ourselves, and this was only possible because of its amazing author and his excellent use of satire and symbolism in the story.
+</p>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: RinasSam</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
