@@ -1,3 +1,8 @@
+* {
+ font-size: 100%;
+ font-family: Noto Sans;
+}
+
 a:link {
   color: #006eff;
   background-color: transparent;
