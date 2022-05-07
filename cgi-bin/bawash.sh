@@ -1,0 +1,3 @@
+#!/bin/sh
+
+echo QUERY_STRING=$QUERY_STRING
