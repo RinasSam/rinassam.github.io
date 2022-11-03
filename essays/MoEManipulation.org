@@ -40,11 +40,12 @@
 \nbsp{}\nbsp{}\nbsp{}\nbsp{}\nbsp{}\nbsp{}\nbsp{}\nbsp{}Manipulation is a powerful tool in humanity's arsenal. It can be a method of correcting the wrongdoings of others, and it could itself be the bane of the people with its dangerous, and sometimes unexpected, impacts on society. Maybe one day, humanity will be able to live in such a way that manipulation may become an obsolete tactic, but in the present, Manipulation is needed in our world, but it isn't a must to resort to it; it is a choice, just as is the case with almost everything else in the world. The choice always exists, and sometimes the choice requires such desperate measures for the greater good.
 
 #+BEGIN_EXPORT html
-<sup>
+<sup><i>
 #+END_EXPORT
 *References:*
 
 “Modern the Merchant of Venice.” No Sweat Shakespeare, 16 Feb. 2020, nosweatshakespeare.com/plays/modern-the-merchant-of-venice.
 #+BEGIN_EXPORT html
+</i>
 </sup>
 #+END_EXPORT
