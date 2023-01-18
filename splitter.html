@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Discord Message Splitter (Real)</title>
+        <link rel="stylesheet" href="/styles.css">
+    </head>
+
+        <nav>
+
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/video_memes.html">Random Videos</a></li>
+                <li><a href="/rinassam_memes.html">RinasSam Memes</a></li>
+                <li><a href="/music.html">RinasSam Music</a></li>
+                <li><a href="/essays.html">Literature Essays</a></li>
+                <li><a href="/discord_bots.html">My Discord Bots</a></li>
+                <li><a href="/discord_bots.html">My Discord Bots</a></li>
+                <li class="active"><a href="/splitter.html">Le Message Splitter</a></li>
+                <img src="/images/RinasSam Logo.png" alt="RinasSam Logo" align="left" height=169 style="position:absolute;left:0px; top:169px;" border="0px">
+            </ul>
+        </nav>
+
+        <div class="main">
+    <body> 
+        <h1>Le Discord Message Splitter</h1>      
+	<br>
+	<p>This text wall splitter is made for Discord, and is based off of the <a href="https://github.com/hoodedice/discord-splitter">code by Hoodedice.</a></p>
+	<p> I just wanted to improve it so that it is actually more feasible for normal use. The splitter they made splits sentences in half at times, and even removes formatting. So I updated it.</p>
+	<br>
+	<p>Credit goes to Hoodedice. This project is licensed under the MIT License as well.</p>
+
+	<br>
+	<br>
+		<div>
+			<textarea id="the_box" cols="120" scrollbar="true" rows="25"></textarea>
+		</div>
+		<button id="the_but" onclick="classic()" style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Classic Split</button>
+		<button id="but2" onclick="split_it()" style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Spoiler Split</button>
+		<button id="but4" onclick="shid()" style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Last Resort</button>
+		<div id="splitted"></div>
+		
+		<button id="but5" onclick="undo()" style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Undo</button>
+		<button id="but6" onclick="redo()" style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Redo (Only works after Undo)</button>
+        <br>
+        <br>
+        <hr>
+        <a href="mailto:samkhaldoon2006@gmail.com" style="font-size:10px"><em>Contact me via email.</em></a>
+        </div>
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+	let text=document.getElementById('the_box'),contents='null',num_splits=0,results=document.getElementById('splitted');
+	
+
+	var old = [];
+	old[0] = null;
+	var yes = 1;
+
+
+	function regexIndexOf(string, regex, startpos) {
+		
+    var indexOf = string.substring(startpos || 0).search(regex);
+    return (indexOf >= 0) ? (indexOf + (startpos || 0)) : indexOf;
+}
+
+function regexLastIndexOf(string, regex, startpos) {
+    regex = (regex.global) ? regex : new RegExp(regex.source, "g" + (regex.ignoreCase ? "i" : "") + (regex.multiLine ? "m" : ""));
+    if(typeof (startpos) == "undefined") {
+        startpos = string.length;
+    } else if(startpos < 0) {
+        startpos = 0;
+    }
+    var stringToWorkWith = string.substring(0, startpos + 1);
+    var lastIndexOf = -1;
+    var nextStop = 0;
+    while((result = regex.exec(stringToWorkWith)) != null) {
+        lastIndexOf = result.index;
+        regex.lastIndex = ++nextStop;
+    }
+    return lastIndexOf;
+}
+
+	function undo()
+	{
+			text.value = '';
+			text.value = old[(--yes)];
+			while(text.value === undefined || text.value === 'undefined')
+			{
+				if(yes === 0){
+					text.value = '';
+				}
+				text.value = old[(--yes)];
+			}
+	}
+
+	function redo()
+	{
+			
+			text.value = '';
+			text.value = old[(++yes)];
+
+			while(text.value === undefined || text.value === 'undefined')
+			{
+				if(yes === 0){
+					text.value = '';
+				}
+				text.value = old[(--yes)];
+			}
+
+	}
+
+	function classic()
+	{
+		contents=text.value;
+		store(contents);
+		num_splits=Math.ceil(contents.length/1990);
+		
+		
+
+		let a=0,b=0,c=0, d=0;
+			d= new RegExp('\.\n', 'g');
+
+			text.value = '----------------------------------------------------------------------------------------------------------------------------\n';
+		while(1990*(a-1) < contents.length)
+		{
+			b=contents.lastIndexOf('\.\n',1990*++a)+1;
+
+			
+			
+			text.value += contents.substring(c,b)+'\n----------------------------------------------------------------------------------------------------------------------------\n';
+//			results.innerHTML+='<p>'+contents.substring(c,b)+'<br></p>';
+
+			c=b+1;
+		}
+
+	}
+
+	function store(str)
+	{
+		
+		   old[yes] = str;
+		yes++;
+	}
+
+	function shid()
+	{
+		contents=text.value;
+		store(contents);
+		num_splits=Math.ceil(contents.length/1990);
+		
+		
+
+		let a=0,b=0,c=0, d=0;
+			d= new RegExp('\.', 'g');
+
+//			text.value = '\n';
+
+			text.value = '----------------------------------------------------------------------------------------------------------------------------\n';
+		while(1990*(a-1) < contents.length)
+		{
+			b=contents.lastIndexOf('\. ',1990*++a)+1;
+
+			
+			
+			text.value += contents.substring(c,b)+'\n----------------------------------------------------------------------------------------------------------------------------\n';
+//			results.innerHTML+='<p>'+contents.substring(c,b)+'<br></p>';
+
+			c=b+1;
+		}
+	}
+
+
+
+
+	function split_it()
+	{
+		contents=text.value;
+		store(contents);
+		//old = contents;
+		num_splits=Math.ceil(contents.length/1990);
+		
+		
+
+		let a=0,b=0,c=0, d=0;
+			d= new RegExp('\.\n', 'g');
+
+			text.value = '||\n';
+		while(1990*(a-1) < contents.length)
+		{
+			b=contents.lastIndexOf('\.\n',1990*++a)+1;
+
+			
+			
+			text.value += contents.substring(c,b)+'\n||\n||\n';
+//			results.innerHTML+='<p>'+contents.substring(c,b)+'<br></p>';
+
+			c=b+1;
+		}
+
+	}
+    </script>
+</html>
