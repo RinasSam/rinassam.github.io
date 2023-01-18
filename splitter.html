@@ -39,6 +39,7 @@
 		<button id="the_but" onclick="classic()" style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Classic Split</button>
 		<button id="but2" onclick="split_it()" style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Spoiler Split</button>
 		<button id="but4" onclick="shid()" style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Last Resort</button>
+		<button id="but8" onclick="god()" style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Last Resort (Spoilering Edition)</button>
 		<div id="splitted"></div>
 		
 		<button id="but5" onclick="undo()" style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Undo</button>
@@ -182,6 +183,33 @@ function regexLastIndexOf(string, regex, startpos) {
 			
 			
 			text.value += contents.substring(c,b)+'\n----------------------------------------------------------------------------------------------------------------------------\n';
+//			results.innerHTML+='<p>'+contents.substring(c,b)+'<br></p>';
+
+			c=b+1;
+		}
+	}
+
+function god()
+	{
+		contents=text.value;
+		store(contents);
+		num_splits=Math.ceil(contents.length/1990);
+		
+		
+
+		let a=0,b=0,c=0, d=0;
+			d= new RegExp('\.', 'g');
+
+//			text.value = '\n';
+
+			text.value = '||\n';
+		while(1990*(a-1) < contents.length)
+		{
+			b=contents.lastIndexOf('\. ',1990*++a)+1;
+
+			
+			
+			text.value += contents.substring(c,b)+'\n||\n||\n';
 //			results.innerHTML+='<p>'+contents.substring(c,b)+'<br></p>';
 
 			c=b+1;
