@@ -35,14 +35,18 @@
 		<div>
 			<textarea id="the_box" cols="120" scrollbar="true" rows="25"></textarea>
 		</div>
-		<button id="the_but" onclick="classic()" style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Classic Split</button>
+		<button id="the_but" onclick="classic()" style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Normal Split</button>
 		<button id="but2" onclick="split_it()" style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Spoiler Split</button>
-		<button id="but4" onclick="shid()" style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Last Resort</button>
-		<button id="but8" onclick="god()" style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Last Resort (Spoilering Edition)</button>
+		<button id="but4" onclick="shid()" style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Period Split</button>
+		<button id="but8" onclick="god()" style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Period Split (Spoilering Edition)</button>
+		<button id="but9" onclick="newline()" style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Newline Split</button>
+		<button id="but10" onclick="newspoil()" style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Newline Split (Spoilering Edition)</button>
+		<button id="but11" onclick="last()" style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Last Resort</button>
+		<button id="but12" onclick="lastspoil()" style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Last Resort (Spoilering Edition)</button>
 		<div id="splitted"></div>
 		
-		<button id="but5" onclick="undo()" style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Undo</button>
-		<button id="but6" onclick="redo()" style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Redo (Only works after Undo)</button>
+		<button id="but5" onclick="undo()" style="background-color:#b10205;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Undo</button>
+		<button id="but6" onclick="redo()" style="background-color:#3ab107;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Redo (Only works after Undo)</button>
         <br>
         <br>
         <hr>
@@ -154,6 +158,76 @@ function regexLastIndexOf(string, regex, startpos) {
 
 	}
 
+
+function last()
+	{
+		contents=text.value;
+		store(contents);
+		num_splits=Math.ceil(contents.length/1990);
+		
+
+
+
+//		for(num_splits!=a;)b=contents.lastIndexOf(' ',1990*++a),results.innerHTML+='<p>'+contents.substring(c,b)+'</p>',c=b+1
+
+
+		
+
+
+		let a=0,b=0,c=0, d=0;
+			d= new RegExp('\.\n', 'g');
+
+			text.value = '----------------------------------------------------------------------------------------------------------------------------\n';
+		while(1990*(a-1) < contents.length)
+		{
+			b=contents.lastIndexOf(' ',1990*++a);
+
+			
+
+			text.value += contents.substring(c,b)+'\n----------------------------------------------------------------------------------------------------------------------------\n';
+	
+//			results.innerHTML+='<p>'+contents.substring(c,b)+'<br></p>';
+
+			c=b+1;
+		
+		}
+		if(contents.substring(c, contents.length).length <= 1990)
+		{
+
+			text.value += contents.substring(c, contents.length)+'\n----------------------------------------------------------------------------------------------------------------------------\n';
+		}
+
+	}
+
+
+	function newline()
+	{
+		contents=text.value;
+		store(contents);
+		num_splits=Math.ceil(contents.length/1990);
+		
+		
+
+		let a=0,b=0,c=0, d=0;
+			d= new RegExp('\n', 'g');
+
+			text.value = '----------------------------------------------------------------------------------------------------------------------------\n';
+		while(1990*(a-1) < contents.length)
+		{
+			b=contents.lastIndexOf('\n',1990*++a)+1;
+
+			
+			
+			text.value += contents.substring(c,b)+'\n----------------------------------------------------------------------------------------------------------------------------\n';
+//			results.innerHTML+='<p>'+contents.substring(c,b)+'<br></p>';
+
+			c=b+1;
+		}
+
+	}
+
+
+
 	function store(str)
 	{
 		
@@ -188,6 +262,46 @@ function regexLastIndexOf(string, regex, startpos) {
 		}
 	}
 
+
+
+
+function lastspoil()
+	{
+		contents=text.value;
+		store(contents);
+		num_splits=Math.ceil(contents.length/1990);
+		
+		
+
+		let a=0,b=0,c=0, d=0;
+			d= new RegExp('\.', 'g');
+
+//			text.value = '\n';
+
+			text.value = '||\n';
+		while(1990*(a) < contents.length)
+
+		{
+			b=contents.lastIndexOf(' ',1990*++a);
+
+			
+			
+			text.value += contents.substring(c,b)+'\n||\n||\n';
+//			results.innerHTML+='<p>'+contents.substring(c,b)+'<br></p>';
+
+			c=b+1;
+		}
+
+if(contents.substring(c, contents.length).length <= 1990)
+		{
+
+			text.value += contents.substring(c, contents.length)+'\n||\n||\n';
+		}
+
+	}
+
+
+
 function god()
 	{
 		contents=text.value;
@@ -216,7 +330,32 @@ function god()
 	}
 
 
+function newspoil()
+	{
+		contents=text.value;
+		store(contents);
+		//old = contents;
+		num_splits=Math.ceil(contents.length/1990);
+		
+		
 
+		let a=0,b=0,c=0, d=0;
+			d= new RegExp('\n', 'g');
+
+			text.value = '||\n';
+		while(1990*(a-1) < contents.length)
+		{
+			b=contents.lastIndexOf('\n',1990*++a)+1;
+
+			
+			
+			text.value += contents.substring(c,b)+'\n||\n||\n';
+//			results.innerHTML+='<p>'+contents.substring(c,b)+'<br></p>';
+
+			c=b+1;
+		}
+
+	}
 
 	function split_it()
 	{
