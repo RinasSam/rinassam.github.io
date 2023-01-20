@@ -145,7 +145,7 @@ function regexLastIndexOf(string, regex, startpos) {
 	{
 		contents=text.value;
 		store(contents);
-		num_splits=Math.ceil(contents.length/2000);
+		num_splits=Math.ceil(contents.length/1990);
 		
 		
 		console.log("LENGTH = "+contents.length+"\n");
@@ -153,9 +153,9 @@ function regexLastIndexOf(string, regex, startpos) {
 			d= new RegExp('\.\n', 'g');
 
 			text.value = '----------------------------------------------------------------------------------------------------------------------------\n';
-		while(contents.substring(b, contents.length).length > 2000)
+		while(contents.substring(b, contents.length).length > 1990)
 		{
-			b=contents.lastIndexOf('\.\n',2000*++a);
+			b=contents.lastIndexOf('\.\n',1990*++a);
 
 			console.log("B = "+b+"\nA = "+a+"\nTILL_END = "+contents.substring(b, contents.length).length+"\n");
 		
@@ -166,7 +166,7 @@ function regexLastIndexOf(string, regex, startpos) {
 
 			c=b+1;
 		}
-		if(contents.substring(c, contents.length).length <= 2000)
+		if(contents.substring(c, contents.length).length <= 1990)
 		{
 	
 			text.value += contents.substring(c, contents.length)+'\n----------------------------------------------------------------------------------------------------------------------------\n';
@@ -180,12 +180,12 @@ function last()
 	{
 		contents=text.value;
 		store(contents);
-		num_splits=Math.ceil(contents.length/2000);
+		num_splits=Math.ceil(contents.length/1990);
 		
 
 
 
-//		for(num_splits!=a;)b=contents.lastIndexOf(' ',2000*++a),results.innerHTML+='<p>'+contents.substring(c,b)+'</p>',c=b+1
+//		for(num_splits!=a;)b=contents.lastIndexOf(' ',1990*++a),results.innerHTML+='<p>'+contents.substring(c,b)+'</p>',c=b+1
 
 
 		
@@ -197,9 +197,9 @@ function last()
 			text.value = '----------------------------------------------------------------------------------------------------------------------------\n';
 
 
-while(contents.substring(b, contents.length).length > 2000)
+while(contents.substring(b, contents.length).length > 1990)
 		{
-			b=contents.lastIndexOf(' ',2000*++a);
+			b=contents.lastIndexOf(' ',1990*++a);
 
 			console.log("B = "+b+"\nA = "+a+"\nTILL_END = "+contents.substring(b, contents.length).length+"\n");
 		
@@ -210,7 +210,7 @@ while(contents.substring(b, contents.length).length > 2000)
 
 			c=b+1;
 		}
-		if(contents.substring(c, contents.length).length <= 2000)
+		if(contents.substring(c, contents.length).length <= 1990)
 		{
 	
 			text.value += contents.substring(c, contents.length)+'\n----------------------------------------------------------------------------------------------------------------------------\n';
@@ -228,7 +228,7 @@ while(contents.substring(b, contents.length).length > 2000)
 	{
 		contents=text.value;
 		store(contents);
-		num_splits=Math.ceil(contents.length/2000);
+		num_splits=Math.ceil(contents.length/1990);
 		
 		
 
@@ -236,9 +236,9 @@ while(contents.substring(b, contents.length).length > 2000)
 			d= new RegExp('\n', 'g');
 
 			text.value = '----------------------------------------------------------------------------------------------------------------------------\n';
-	while(contents.substring(b, contents.length).length > 2000)
+	while(contents.substring(b, contents.length).length > 1990)
 		{
-			b=contents.lastIndexOf('\n',2000*++a);
+			b=contents.lastIndexOf('\n',1990*++a);
 
 			console.log("B = "+b+"\nA = "+a+"\nTILL_END = "+contents.substring(b, contents.length).length+"\n");
 		
@@ -249,7 +249,7 @@ while(contents.substring(b, contents.length).length > 2000)
 
 			c=b+1;
 		}
-		if(contents.substring(c, contents.length).length <= 2000)
+		if(contents.substring(c, contents.length).length <= 1990)
 		{
 	
 			text.value += contents.substring(c, contents.length)+'\n----------------------------------------------------------------------------------------------------------------------------\n';
@@ -271,7 +271,7 @@ while(contents.substring(b, contents.length).length > 2000)
 	{
 		contents=text.value;
 		store(contents);
-		num_splits=Math.ceil(contents.length/2000);
+		num_splits=Math.ceil(contents.length/1990);
 		
 		
 
@@ -281,9 +281,9 @@ while(contents.substring(b, contents.length).length > 2000)
 //			text.value = '\n';
 
 			text.value = '----------------------------------------------------------------------------------------------------------------------------\n';
-while(contents.substring(b, contents.length).length > 2000)
+while(contents.substring(b, contents.length).length > 1990)
 		{
-			b=contents.lastIndexOf('\. ',2000*++a);
+			b=contents.lastIndexOf('\. ',1990*++a);
 
 			console.log("B = "+b+"\nA = "+a+"\nTILL_END = "+contents.substring(b, contents.length).length+"\n");
 		
@@ -294,7 +294,7 @@ while(contents.substring(b, contents.length).length > 2000)
 
 			c=b+1;
 		}
-		if(contents.substring(c, contents.length).length <= 2000)
+		if(contents.substring(c, contents.length).length <= 1990)
 		{
 	
 			text.value += contents.substring(c, contents.length)+'\n----------------------------------------------------------------------------------------------------------------------------\n';
@@ -310,7 +310,7 @@ function lastspoil()
 	{
 		contents=text.value;
 		store(contents);
-		num_splits=Math.ceil(contents.length/2000);
+		num_splits=Math.ceil(contents.length/1990);
 		
 		
 
@@ -322,9 +322,9 @@ function lastspoil()
 			text.value = '||\n';
 
 
-						   	while(contents.substring(b, contents.length).length > 2000)
+						   	while(contents.substring(b, contents.length).length > 1990)
 		{
-			b=contents.lastIndexOf('\.\n',2000*++a);
+			b=contents.lastIndexOf('\.\n',1990*++a);
 
 			console.log("B = "+b+"\nA = "+a+"\nTILL_END = "+contents.substring(b, contents.length).length+"\n");
 		
@@ -337,7 +337,7 @@ function lastspoil()
 		}
 
 
-		if(contents.substring(c, contents.length).length <= 2000)
+		if(contents.substring(c, contents.length).length <= 1990)
 		{
 	
 			text.value += contents.substring(c, contents.length)+'\n||\n';
@@ -352,7 +352,7 @@ function god()
 	{
 		contents=text.value;
 		store(contents);
-		num_splits=Math.ceil(contents.length/2000);
+		num_splits=Math.ceil(contents.length/1990);
 		
 		
 
@@ -364,9 +364,9 @@ function god()
 			text.value = '||\n';
 
 
-						   	while(contents.substring(b, contents.length).length > 2000)
+						   	while(contents.substring(b, contents.length).length > 1990)
 		{
-			b=contents.lastIndexOf('\.\n',2000*++a);
+			b=contents.lastIndexOf('\.\n',1990*++a);
 
 			console.log("B = "+b+"\nA = "+a+"\nTILL_END = "+contents.substring(b, contents.length).length+"\n");
 		
@@ -377,7 +377,7 @@ function god()
 
 			c=b+1;
 		}
-		if(contents.substring(c, contents.length).length <= 2000)
+		if(contents.substring(c, contents.length).length <= 1990)
 		{
 	
 			text.value += contents.substring(c, contents.length)+'\n||\n';
@@ -393,7 +393,7 @@ function newspoil()
 			contents=text.value;
 			store(contents);
 			//old = contents;
-			num_splits=Math.ceil(contents.length/2000);
+			num_splits=Math.ceil(contents.length/1990);
 		
 		
 
@@ -401,9 +401,9 @@ function newspoil()
 			d= new RegExp('\n', 'g');
 
 			text.value = '||\n';
-			while(contents.substring(b, contents.length).length > 2000)
+			while(contents.substring(b, contents.length).length > 1990)
 		{
-			b=contents.lastIndexOf('\.\n',2000*++a);
+			b=contents.lastIndexOf('\.\n',1990*++a);
 
 			console.log("B = "+b+"\nA = "+a+"\nTILL_END = "+contents.substring(b, contents.length).length+"\n");
 		
@@ -414,7 +414,7 @@ function newspoil()
 
 			c=b+1;
 		}
-		if(contents.substring(c, contents.length).length <= 2000)
+		if(contents.substring(c, contents.length).length <= 1990)
 		{
 	text.value += contents.substring(c, contents.length)+'\n||\n';
 
@@ -430,7 +430,7 @@ function newspoil()
 		contents=text.value;
 		store(contents);
 		//old = contents;
-		num_splits=Math.ceil(contents.length/2000);
+		num_splits=Math.ceil(contents.length/1990);
 		
 		
 
@@ -439,9 +439,9 @@ function newspoil()
 
 			text.value = '||\n';
 
-						   	while(contents.substring(b, contents.length).length > 2000)
+						   	while(contents.substring(b, contents.length).length > 1990)
 		{
-			b=contents.lastIndexOf('\.\n',2000*++a);
+			b=contents.lastIndexOf('\.\n',1990*++a);
 
 			console.log("B = "+b+"\nA = "+a+"\nTILL_END = "+contents.substring(b, contents.length).length+"\n");
 		
@@ -452,7 +452,7 @@ function newspoil()
 
 			c=b+1;
 		}
-		if(contents.substring(c, contents.length).length <= 2000)
+		if(contents.substring(c, contents.length).length <= 1990)
 		{
 	text.value += contents.substring(c, contents.length)+'\n||\n';
 
