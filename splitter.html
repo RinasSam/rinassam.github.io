@@ -136,25 +136,33 @@ function regexLastIndexOf(string, regex, startpos) {
 	{
 		contents=text.value;
 		store(contents);
-		num_splits=Math.ceil(contents.length/1990);
+		num_splits=Math.ceil(contents.length/2000);
 		
 		
-
+		console.log("LENGTH = "+contents.length+"\n");
 		let a=0,b=0,c=0, d=0;
 			d= new RegExp('\.\n', 'g');
 
 			text.value = '----------------------------------------------------------------------------------------------------------------------------\n';
-		while(1990*(a-1) < contents.length)
+		while(contents.substring(b, contents.length).length > 2000)
 		{
-			b=contents.lastIndexOf('\.\n',1990*++a)+1;
+			b=contents.lastIndexOf('\.\n',2000*++a);
 
+			console.log("B = "+b+"\nA = "+a+"\nTILL_END = "+contents.substring(b, contents.length).length+"\n");
+		
 			
-			
+
 			text.value += contents.substring(c,b)+'\n----------------------------------------------------------------------------------------------------------------------------\n';
 //			results.innerHTML+='<p>'+contents.substring(c,b)+'<br></p>';
 
 			c=b+1;
 		}
+		if(contents.substring(c, contents.length).length <= 2000)
+		{
+	
+			text.value += contents.substring(c, contents.length)+'\n----------------------------------------------------------------------------------------------------------------------------\n';
+		}
+
 
 	}
 
@@ -163,12 +171,12 @@ function last()
 	{
 		contents=text.value;
 		store(contents);
-		num_splits=Math.ceil(contents.length/1990);
+		num_splits=Math.ceil(contents.length/2000);
 		
 
 
 
-//		for(num_splits!=a;)b=contents.lastIndexOf(' ',1990*++a),results.innerHTML+='<p>'+contents.substring(c,b)+'</p>',c=b+1
+//		for(num_splits!=a;)b=contents.lastIndexOf(' ',2000*++a),results.innerHTML+='<p>'+contents.substring(c,b)+'</p>',c=b+1
 
 
 		
@@ -178,24 +186,31 @@ function last()
 			d= new RegExp('\.\n', 'g');
 
 			text.value = '----------------------------------------------------------------------------------------------------------------------------\n';
-		while(1990*(a-1) < contents.length)
-		{
-			b=contents.lastIndexOf(' ',1990*++a);
 
+
+while(contents.substring(b, contents.length).length > 2000)
+		{
+			b=contents.lastIndexOf(' ',2000*++a);
+
+			console.log("B = "+b+"\nA = "+a+"\nTILL_END = "+contents.substring(b, contents.length).length+"\n");
+		
 			
 
 			text.value += contents.substring(c,b)+'\n----------------------------------------------------------------------------------------------------------------------------\n';
-	
 //			results.innerHTML+='<p>'+contents.substring(c,b)+'<br></p>';
 
 			c=b+1;
-		
 		}
-		if(contents.substring(c, contents.length).length <= 1990)
+		if(contents.substring(c, contents.length).length <= 2000)
 		{
-
+	
 			text.value += contents.substring(c, contents.length)+'\n----------------------------------------------------------------------------------------------------------------------------\n';
 		}
+
+
+
+
+
 
 	}
 
@@ -204,7 +219,7 @@ function last()
 	{
 		contents=text.value;
 		store(contents);
-		num_splits=Math.ceil(contents.length/1990);
+		num_splits=Math.ceil(contents.length/2000);
 		
 		
 
@@ -212,17 +227,25 @@ function last()
 			d= new RegExp('\n', 'g');
 
 			text.value = '----------------------------------------------------------------------------------------------------------------------------\n';
-		while(1990*(a-1) < contents.length)
+	while(contents.substring(b, contents.length).length > 2000)
 		{
-			b=contents.lastIndexOf('\n',1990*++a)+1;
+			b=contents.lastIndexOf('\n',2000*++a);
 
+			console.log("B = "+b+"\nA = "+a+"\nTILL_END = "+contents.substring(b, contents.length).length+"\n");
+		
 			
-			
+
 			text.value += contents.substring(c,b)+'\n----------------------------------------------------------------------------------------------------------------------------\n';
 //			results.innerHTML+='<p>'+contents.substring(c,b)+'<br></p>';
 
 			c=b+1;
 		}
+		if(contents.substring(c, contents.length).length <= 2000)
+		{
+	
+			text.value += contents.substring(c, contents.length)+'\n----------------------------------------------------------------------------------------------------------------------------\n';
+		}
+	
 
 	}
 
@@ -239,7 +262,7 @@ function last()
 	{
 		contents=text.value;
 		store(contents);
-		num_splits=Math.ceil(contents.length/1990);
+		num_splits=Math.ceil(contents.length/2000);
 		
 		
 
@@ -249,17 +272,26 @@ function last()
 //			text.value = '\n';
 
 			text.value = '----------------------------------------------------------------------------------------------------------------------------\n';
-		while(1990*(a-1) < contents.length)
+while(contents.substring(b, contents.length).length > 2000)
 		{
-			b=contents.lastIndexOf('\. ',1990*++a)+1;
+			b=contents.lastIndexOf('\. ',2000*++a);
 
+			console.log("B = "+b+"\nA = "+a+"\nTILL_END = "+contents.substring(b, contents.length).length+"\n");
+		
 			
-			
+
 			text.value += contents.substring(c,b)+'\n----------------------------------------------------------------------------------------------------------------------------\n';
 //			results.innerHTML+='<p>'+contents.substring(c,b)+'<br></p>';
 
 			c=b+1;
 		}
+		if(contents.substring(c, contents.length).length <= 2000)
+		{
+	
+			text.value += contents.substring(c, contents.length)+'\n----------------------------------------------------------------------------------------------------------------------------\n';
+		}
+
+
 	}
 
 
@@ -269,7 +301,7 @@ function lastspoil()
 	{
 		contents=text.value;
 		store(contents);
-		num_splits=Math.ceil(contents.length/1990);
+		num_splits=Math.ceil(contents.length/2000);
 		
 		
 
@@ -279,24 +311,29 @@ function lastspoil()
 //			text.value = '\n';
 
 			text.value = '||\n';
-		while(1990*(a) < contents.length)
 
+
+						   	while(contents.substring(b, contents.length).length > 2000)
 		{
-			b=contents.lastIndexOf(' ',1990*++a);
+			b=contents.lastIndexOf('\.\n',2000*++a);
 
+			console.log("B = "+b+"\nA = "+a+"\nTILL_END = "+contents.substring(b, contents.length).length+"\n");
+		
 			
-			
+
 			text.value += contents.substring(c,b)+'\n||\n||\n';
 //			results.innerHTML+='<p>'+contents.substring(c,b)+'<br></p>';
 
 			c=b+1;
 		}
 
-if(contents.substring(c, contents.length).length <= 1990)
-		{
 
-			text.value += contents.substring(c, contents.length)+'\n||\n||\n';
+		if(contents.substring(c, contents.length).length <= 2000)
+		{
+	
+			text.value += contents.substring(c, contents.length)+'\n||\n';
 		}
+	
 
 	}
 
@@ -306,7 +343,7 @@ function god()
 	{
 		contents=text.value;
 		store(contents);
-		num_splits=Math.ceil(contents.length/1990);
+		num_splits=Math.ceil(contents.length/2000);
 		
 		
 
@@ -316,45 +353,67 @@ function god()
 //			text.value = '\n';
 
 			text.value = '||\n';
-		while(1990*(a-1) < contents.length)
-		{
-			b=contents.lastIndexOf('\. ',1990*++a)+1;
 
+
+						   	while(contents.substring(b, contents.length).length > 2000)
+		{
+			b=contents.lastIndexOf('\.\n',2000*++a);
+
+			console.log("B = "+b+"\nA = "+a+"\nTILL_END = "+contents.substring(b, contents.length).length+"\n");
+		
 			
-			
+
 			text.value += contents.substring(c,b)+'\n||\n||\n';
 //			results.innerHTML+='<p>'+contents.substring(c,b)+'<br></p>';
 
 			c=b+1;
 		}
-	}
+		if(contents.substring(c, contents.length).length <= 2000)
+		{
+	
+			text.value += contents.substring(c, contents.length)+'\n||\n';
+						   
+		}
+
+
+}
 
 
 function newspoil()
 	{
-		contents=text.value;
-		store(contents);
-		//old = contents;
-		num_splits=Math.ceil(contents.length/1990);
+			contents=text.value;
+			store(contents);
+			//old = contents;
+			num_splits=Math.ceil(contents.length/2000);
 		
 		
 
-		let a=0,b=0,c=0, d=0;
+			let a=0,b=0,c=0, d=0;
 			d= new RegExp('\n', 'g');
 
 			text.value = '||\n';
-		while(1990*(a-1) < contents.length)
+			while(contents.substring(b, contents.length).length > 2000)
 		{
-			b=contents.lastIndexOf('\n',1990*++a)+1;
+			b=contents.lastIndexOf('\.\n',2000*++a);
 
+			console.log("B = "+b+"\nA = "+a+"\nTILL_END = "+contents.substring(b, contents.length).length+"\n");
+		
 			
-			
+
 			text.value += contents.substring(c,b)+'\n||\n||\n';
 //			results.innerHTML+='<p>'+contents.substring(c,b)+'<br></p>';
 
 			c=b+1;
 		}
+		if(contents.substring(c, contents.length).length <= 2000)
+		{
+	text.value += contents.substring(c, contents.length)+'\n||\n';
 
+			
+		}
+
+
+		
 	}
 
 	function split_it()
@@ -362,7 +421,7 @@ function newspoil()
 		contents=text.value;
 		store(contents);
 		//old = contents;
-		num_splits=Math.ceil(contents.length/1990);
+		num_splits=Math.ceil(contents.length/2000);
 		
 		
 
@@ -370,17 +429,27 @@ function newspoil()
 			d= new RegExp('\.\n', 'g');
 
 			text.value = '||\n';
-		while(1990*(a-1) < contents.length)
-		{
-			b=contents.lastIndexOf('\.\n',1990*++a)+1;
 
+						   	while(contents.substring(b, contents.length).length > 2000)
+		{
+			b=contents.lastIndexOf('\.\n',2000*++a);
+
+			console.log("B = "+b+"\nA = "+a+"\nTILL_END = "+contents.substring(b, contents.length).length+"\n");
+		
 			
-			
+
 			text.value += contents.substring(c,b)+'\n||\n||\n';
 //			results.innerHTML+='<p>'+contents.substring(c,b)+'<br></p>';
 
 			c=b+1;
 		}
+		if(contents.substring(c, contents.length).length <= 2000)
+		{
+	text.value += contents.substring(c, contents.length)+'\n||\n';
+
+//		
+		}
+
 
 	}
     </script>
