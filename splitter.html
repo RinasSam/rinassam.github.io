@@ -27,8 +27,17 @@
 	<br>
 	<p>This text wall splitter is made for Discord, and is based off of the <a href="https://github.com/hoodedice/discord-splitter">code by Hoodedice.</a></p>
 	<p> I just wanted to improve it so that it is actually more feasible for normal use. The splitter they made splits sentences in half at times, and even removes formatting. So I updated it.</p>
-	<br>
 	<p>Credit goes to Hoodedice. This project is licensed under the MIT License as well.</p>
+	<br>
+	<h2>How 2 Use</h2>
+	<p>Write or Paste some text in the text box, then press one of the buttons below.</p>
+	<p>Normal Split: Splits your text based on periods (.) followed by a newline.</p>
+	<p>Period Split: Splits your text based on periods (.) followed by a space.</p>
+	<p>Newline Split: Splits your text based on periods newlines.</p>
+	<p>Last Resort: Splits your text based on spaces (has a tendency to cut your sentences in half).</p>
+	<br>
+	<p>The Spoil buttons replace the line when dividing a message with spoiler tags, thus allowing you to make a big spoiler message.</p>
+<p>Undo and Redo buttons are self explanatory.</p>
 
 	<br>
 	<br>
@@ -36,13 +45,13 @@
 			<textarea id="the_box" cols="120" scrollbar="true" rows="25"></textarea>
 		</div>
 		<button id="the_but" onclick="classic()" style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Normal Split</button>
-		<button id="but2" onclick="split_it()" style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Spoiler Split</button>
+		<button id="but2" onclick="split_it()" style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Normal Split (Spoiler)</button>
 		<button id="but4" onclick="shid()" style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Period Split</button>
-		<button id="but8" onclick="god()" style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Period Split (Spoilering Edition)</button>
+		<button id="but8" onclick="god()" style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Period Split (Spoiler)</button>
 		<button id="but9" onclick="newline()" style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Newline Split</button>
-		<button id="but10" onclick="newspoil()" style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Newline Split (Spoilering Edition)</button>
+		<button id="but10" onclick="newspoil()" style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Newline Split (Spoiler)</button>
 		<button id="but11" onclick="last()" style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Last Resort</button>
-		<button id="but12" onclick="lastspoil()" style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Last Resort (Spoilering Edition)</button>
+		<button id="but12" onclick="lastspoil()" style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Last Resort (Spoiler)</button>
 		<div id="splitted"></div>
 		
 		<button id="but5" onclick="undo()" style="background-color:#b10205;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Undo</button>
