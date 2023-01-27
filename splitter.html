@@ -159,12 +159,12 @@ function regexLastIndexOf(string, regex, startpos) {
 
 			console.log("B = "+b+"\nA = "+a+"\nTILL_END = "+contents.substring(b, contents.length).length+"\n");
 		
-			
+			b++;
 
 			text.value += contents.substring(c,b)+'\n----------------------------------------------------------------------------------------------------------------------------\n';
 //			results.innerHTML+='<p>'+contents.substring(c,b)+'<br></p>';
 
-			c=b+1;
+			c=b;
 		}
 		if(contents.substring(c, contents.length).length <= 1990)
 		{
@@ -203,12 +203,12 @@ while(contents.substring(b, contents.length).length > 1990)
 
 			console.log("B = "+b+"\nA = "+a+"\nTILL_END = "+contents.substring(b, contents.length).length+"\n");
 		
-			
+b++;			
 
 			text.value += contents.substring(c,b)+'\n----------------------------------------------------------------------------------------------------------------------------\n';
 //			results.innerHTML+='<p>'+contents.substring(c,b)+'<br></p>';
 
-			c=b+1;
+			c=b;
 		}
 		if(contents.substring(c, contents.length).length <= 1990)
 		{
@@ -242,12 +242,12 @@ while(contents.substring(b, contents.length).length > 1990)
 
 			console.log("B = "+b+"\nA = "+a+"\nTILL_END = "+contents.substring(b, contents.length).length+"\n");
 		
-			
+			b++;
 
 			text.value += contents.substring(c,b)+'\n----------------------------------------------------------------------------------------------------------------------------\n';
 //			results.innerHTML+='<p>'+contents.substring(c,b)+'<br></p>';
 
-			c=b+1;
+			c=b;
 		}
 		if(contents.substring(c, contents.length).length <= 1990)
 		{
@@ -287,12 +287,12 @@ while(contents.substring(b, contents.length).length > 1990)
 
 			console.log("B = "+b+"\nA = "+a+"\nTILL_END = "+contents.substring(b, contents.length).length+"\n");
 		
-			
+			b++;
 
 			text.value += contents.substring(c,b)+'\n----------------------------------------------------------------------------------------------------------------------------\n';
 //			results.innerHTML+='<p>'+contents.substring(c,b)+'<br></p>';
 
-			c=b+1;
+			c=b;
 		}
 		if(contents.substring(c, contents.length).length <= 1990)
 		{
@@ -328,12 +328,12 @@ function lastspoil()
 
 			console.log("B = "+b+"\nA = "+a+"\nTILL_END = "+contents.substring(b, contents.length).length+"\n");
 		
-			
+			b++;
 
 			text.value += contents.substring(c,b)+'\n||\n||\n';
 //			results.innerHTML+='<p>'+contents.substring(c,b)+'<br></p>';
 
-			c=b+1;
+			c=b;
 		}
 
 
@@ -370,12 +370,12 @@ function god()
 
 			console.log("B = "+b+"\nA = "+a+"\nTILL_END = "+contents.substring(b, contents.length).length+"\n");
 		
-			
+			b++;
 
 			text.value += contents.substring(c,b)+'\n||\n||\n';
 //			results.innerHTML+='<p>'+contents.substring(c,b)+'<br></p>';
 
-			c=b+1;
+			c=b;
 		}
 		if(contents.substring(c, contents.length).length <= 1990)
 		{
@@ -405,17 +405,19 @@ function newspoil()
 		{
 			b=contents.lastIndexOf('\.\n',1990*++a);
 
-			console.log("B = "+b+"\nA = "+a+"\nTILL_END = "+contents.substring(b, contents.length).length+"\n");
+			console.log("C = "+c+"\nB = "+b+"\nA = "+a+"\nTILL_END = "+contents.substring(b, contents.length).length+"\n");
+
 		
 			
-
+			b++;
 			text.value += contents.substring(c,b)+'\n||\n||\n';
 //			results.innerHTML+='<p>'+contents.substring(c,b)+'<br></p>';
 
-			c=b+1;
+			c=b;
 		}
 		if(contents.substring(c, contents.length).length <= 1990)
 		{
+						   console.log("C = "+c+"\n");
 	text.value += contents.substring(c, contents.length)+'\n||\n';
 
 			
@@ -444,13 +446,15 @@ function newspoil()
 			b=contents.lastIndexOf('\.\n',1990*++a);
 
 			console.log("B = "+b+"\nA = "+a+"\nTILL_END = "+contents.substring(b, contents.length).length+"\n");
-		
+	
+			b++;
+			text.value += contents.substring(c,b)+'\n||\n||\n';	
 			
 
-			text.value += contents.substring(c,b)+'\n||\n||\n';
+//			text.value += contents.substring(c,b)+'\n||\n||\n';
 //			results.innerHTML+='<p>'+contents.substring(c,b)+'<br></p>';
 
-			c=b+1;
+			c=b;
 		}
 		if(contents.substring(c, contents.length).length <= 1990)
 		{
