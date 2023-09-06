@@ -1,0 +1,55 @@
+#+TITLE: Why Religion is Invaluable for Humans
+#+DESCRIPTION: The Art of War Essay
+#+AUTHOR: RinasSam
+#+EMAIL: samkhaldoon2006@gmail.com
+#+OPTIONS: ^:{}
+#+OPTIONS: toc:nil
+#+OPTIONS: num:nil
+#+OPTIONS: \n:nil
+#+OPTIONS: timestamp:nil
+#+BEGIN_EXPORT html
+<body style="background-color:#262d3a; color: white; margin-left: 225px;">
+
+<head>
+        <meta charset="UTF-8">
+        <title>Literature Essays</title>
+        <link rel="stylesheet" href="/styles.css">
+    </head>
+
+<nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/video_memes.html">Random Videos</a></li>
+                <li><a href="/rinassam_memes.html">RinasSam Memes</a></li>
+                <li><a href="/music.html">RinasSam Music</a></li>
+                <li class="active"><a href="/essays.html">Literature Essays</a></li>
+                <li><a href="/discord_bots.html">My Discord Bots</a></li>
+                <img src="/images/RinasSam Logo.png" alt="RinasSam Logo" align="left" height=169 border="0px">
+            </ul>
+</nav>
+
+#+END_EXPORT
+
+\nbsp{}\nbsp{}\nbsp{}\nbsp{}\nbsp{}\nbsp{}\nbsp{}\nbsp{}Whether people like it or not, religion has always been a major part of human civilization. And it is quite an odd thing; no other species apart from us has something that resembles a religion. It is logical, then, to ask: “Why do humans have religion?” The answer for this question usually comes down to answering the eternal questions of purpose and existence. However, not all religions provide an answer(s) to these questions. It is, therefore, better to ask: “What has religion provided for humans?” The truth is, religion had a massive impact on human civilization and its development. This is partly because religion was not just a “side” thing; rather, it was a lifestyle for most people. As such, their daily lives were influenced greatly by their beliefs and faith. And this is portrayed in their speech, relationships, lives, behavior, and even works. This can be seen clearly in Corrie Ten Boom’s “The Hiding Place”, which details her life during WW2 and the struggle to survive and help others get through those times. The story places a great emphasis on how religion was the key for Corrie to help others and survive. And this is true to a certain degree in real life: religion is invaluable for humans, as it teaches them morals, gives them support, and brings people together.
+
+
+\nbsp{}\nbsp{}\nbsp{}\nbsp{}\nbsp{}\nbsp{}\nbsp{}\nbsp{}One thing that humans care about greatly is morality and ethics. These two are mandatory in human life, for it is through them that humanity can live peacefully and happily with each other. And perhaps the best teacher of morality and ethics is religion. Most religions (especially the Abrahamic ones) emphasize being just, fair, peaceful, and most importantly, morally conscious. Religion teaches the people what is valuable. It teaches the people to do good deeds for the betterment of society. And it teaches them to be selfless and loving of others. In “The Hiding Place”, we can see many examples of the characters’ selflessness and good, loving nature. The Ten Boom family, for instance, put their lives at risk to help the Jews hide from the Nazis. Corrie and Betsie (during their stay in the prison) always help the other women, even if it is at the expense of their own safety and health. This selflessness (and good morality) is the foundation for a solid and sturdy society. A Selfish society that is built upon injustice, corruption, and profanity is destined to fall. But one that is built on good morals and ethics is desirable, and will continue thriving through the hardest of times, because it is self-sustaining; the people made it, and they will help it survive.
+
+\nbsp{}\nbsp{}\nbsp{}\nbsp{}\nbsp{}\nbsp{}\nbsp{}\nbsp{}Humans are quite frail compared to their world. This is ironic, considering that humans are currently the dominant species on Earth. Yet, they can easily be bested by animals and nature. This frailty and fragility instills innate fear and a feeling of helplessness inside humans. In “The Hiding Place” for example, Corrie was taken to a concentration camp (and several prisons later) after she had been caught by the Nazis. Her conditions are miserable, she suffers greatly, and she is pushed to her absolute limits. Despite her frailty and helplessness, Corrie does not surrender, because of her faith; religion provides support for its believers. It gives them something to lay back upon, something they can believe in, something they can trust. And this is nothing short of valuable for humans. They will not feel alone, they will not feel helpless; there will always be someone/something on their side, and all they need to do is believe. It helps them cope with the hardest of times, and make the most out of their best times. Religion gives humans the hope they needed in the most desperate times.
+
+
+\nbsp{}\nbsp{}\nbsp{}\nbsp{}\nbsp{}\nbsp{}\nbsp{}\nbsp{}Humans have not really gotten well with each other throughout most of history. Discrimination, segregation, and prejudice have plagued humanity throughout most of its known history. For humans to live together peacefully, it was necessary to find something that could hold people of differing races, cultures, places, and civilizations together. And to this day, none has proved to be more successful than religion; religion ties people under a common set of beliefs, faith(s), rules, standards, morals, and values despite their differences. The Roman empire was able to unite hundreds of differing cultures under the banner of Christianity. The Muslims were able to unite most of the Middle East under the banner of Islam. A Christian from Brazil and a Christian from Russia can still find common ground in their religions and faith in God. This is also shown in “The Hiding Place” wonderfully. Corrie risks her life by taking care of the Jews; because she finds common ground with them and connects with their faith. Lieutenant Rahms and Corrie connect with each other through their talks about the Bible and Christianity. Religion brings people together, and it has proven to be extremely successful in that regard.
+
+\nbsp{}\nbsp{}\nbsp{}\nbsp{}\nbsp{}\nbsp{}\nbsp{}\nbsp{}In conclusion, while religion may be a controversial (and to some people, stupid) topic, its effects on mankind cannot be denied. It has helped humans get through their differences, have hope and faith in their abilities and survival, and develop a solid moral standard that is the backbone of society itself. It was a significant player in helping humans live with each other peacefully and successfully. Even though it was used incorrectly and for malicious intentions in the past, what must be understood is that religion is merely a tool for humans. It can be used for good or evil. It is up to the people to choose in what way they should use it. And it is in our hands to teach people to use it in a good way, to help humanity progress and become one united nation in the future.
+
+#+BEGIN_EXPORT html
+<sup><i>
+#+END_EXPORT
+*References:*
+
+Boom, C. T., & Sherrill, J. (1984). The Hiding Place: The Triumphant True Story of Corrie Ten
+Boom. National Geographic Books.
+#+BEGIN_EXPORT html
+</i>
+</sup>
+#+END_EXPORT
