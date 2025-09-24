@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Discord Message Splitter (Real)</title>
+	<link rel="stylesheet" href="/styles.css">
+</head>
+
+<nav>
+
+	<ul>
+		<li><a href="/">Home</a></li>
+		<li><a href="/music.html">RinasSam Music</a></li>
+		<li class="active"><a href="/splitter.html">Le Message Splitter</a></li>
+		<img src="/images/RinasSam Logo.png" alt="RinasSam Logo" align="left" height=169
+			style="position:absolute;left:0px; top:169px;" border="0px">
+	</ul>
+</nav>
+
+<div class="main">
+
+	<body>
+		<h1>Le Discord Message Splitter</h1>
+		<br>
+		<p>This text wall splitter is made for Discord, and is based off of the <a
+				href="https://github.com/hoodedice/discord-splitter">code by Hoodedice.</a></p>
+		<p> I just wanted to improve it so that it is actually more feasible for normal use. The splitter they made
+			splits sentences in half at times, and even removes formatting. So I updated it.</p>
+		<p>Credit goes to Hoodedice. This project is licensed under the MIT License as well.</p>
+		<br>
+		<h2>How 2 Use</h2>
+		<p>Write or Paste some text in the text box, then press one of the buttons below.</p>
+		<p>Normal Split: Splits your text based on periods (.) followed by a newline.</p>
+		<p>Period Split: Splits your text based on periods (.) followed by a space.</p>
+		<p>Newline Split: Splits your text based on periods newlines.</p>
+		<p>Last Resort: Splits your text based on spaces (has a tendency to cut your sentences in half).</p>
+		<br>
+		<p>The Spoil buttons replace the line when dividing a message with spoiler tags, thus allowing you to make a big
+			spoiler message.</p>
+		<p>Undo and Redo buttons are self explanatory.</p>
+
+		<br>
+		<br>
+		<div>
+			<textarea id="the_box" cols="120" scrollbar="true" rows="25"></textarea>
+		</div>
+		<button id="the_but" onclick="classic()"
+			style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Normal
+			Split</button>
+		<button id="but2" onclick="split_it()"
+			style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Normal
+			Split (Spoiler)</button>
+		<button id="but4" onclick="shid()"
+			style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Period
+			Split</button>
+		<button id="but8" onclick="god()"
+			style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Period
+			Split (Spoiler)</button>
+		<button id="but9" onclick="newline()"
+			style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Newline
+			Split</button>
+		<button id="but10" onclick="newspoil()"
+			style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Newline
+			Split (Spoiler)</button>
+		<button id="but11" onclick="last()"
+			style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Last
+			Resort</button>
+		<button id="but12" onclick="lastspoil()"
+			style="background-color:#00589c;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Last
+			Resort (Spoiler)</button>
+		<div id="splitted"></div>
+
+		<button id="but5" onclick="undo()"
+			style="background-color:#b10205;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Undo</button>
+		<button id="but6" onclick="redo()"
+			style="background-color:#3ab107;border-radius:5px;border:1px solid #29668f;display:inline-block;cursor:pointer;color:#fff;font-family:Arial;font-size:15px;font-weight:700;padding:11px 23px">Redo
+			(Only works after Undo)</button>
+		<br>
+		<br>
+		<hr>
+		<a href="mailto:rinassam@duck.com" style="font-size:10px"><em>Contact me via email.</em></a>
+</div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+	let text = document.getElementById('the_box'), contents = 'null', num_splits = 0, results = document.getElementById('splitted');
+
+
+	var old = [];
+	old[0] = null;
+	var yes = 1;
+
+
+	function regexIndexOf(string, regex, startpos) {
+
+		var indexOf = string.substring(startpos || 0).search(regex);
+		return (indexOf >= 0) ? (indexOf + (startpos || 0)) : indexOf;
+	}
+
+	function regexLastIndexOf(string, regex, startpos) {
+		regex = (regex.global) ? regex : new RegExp(regex.source, "g" + (regex.ignoreCase ? "i" : "") + (regex.multiLine ? "m" : ""));
+		if (typeof (startpos) == "undefined") {
+			startpos = string.length;
+		} else if (startpos < 0) {
+			startpos = 0;
+		}
+		var stringToWorkWith = string.substring(0, startpos + 1);
+		var lastIndexOf = -1;
+		var nextStop = 0;
+		while ((result = regex.exec(stringToWorkWith)) != null) {
+			lastIndexOf = result.index;
+			regex.lastIndex = ++nextStop;
+		}
+		return lastIndexOf;
+	}
+
+	function undo() {
+		text.value = '';
+		text.value = old[(--yes)];
+		while (text.value === undefined || text.value === 'undefined') {
+			if (yes === 0) {
+				text.value = '';
+			}
+			text.value = old[(--yes)];
+		}
+	}
+
+	function redo() {
+
+		text.value = '';
+		text.value = old[(++yes)];
+
+		while (text.value === undefined || text.value === 'undefined') {
+			if (yes === 0) {
+				text.value = '';
+			}
+			text.value = old[(--yes)];
+		}
+
+	}
+
+	function classic() {
+		contents = text.value;
+		store(contents);
+		num_splits = Math.ceil(contents.length / 1990);
+
+
+		console.log("LENGTH = " + contents.length + "\n");
+		let a = 0, b = 0, c = 0, d = 0;
+		d = new RegExp('\.\n', 'g');
+
+		text.value = '----------------------------------------------------------------------------------------------------------------------------\n';
+		while (contents.substring(b, contents.length).length > 1990) {
+			b = contents.lastIndexOf('\.\n', 1990 * ++a);
+
+			console.log("B = " + b + "\nA = " + a + "\nTILL_END = " + contents.substring(b, contents.length).length + "\n");
+
+			b++;
+
+			text.value += contents.substring(c, b) + '\n----------------------------------------------------------------------------------------------------------------------------\n';
+			//			results.innerHTML+='<p>'+contents.substring(c,b)+'<br></p>';
+
+			c = b;
+		}
+		if (contents.substring(c, contents.length).length <= 1990) {
+
+			text.value += contents.substring(c, contents.length) + '\n----------------------------------------------------------------------------------------------------------------------------\n';
+		}
+
+
+	}
+
+
+	function last() {
+		contents = text.value;
+		store(contents);
+		num_splits = Math.ceil(contents.length / 1990);
+
+
+
+
+		//		for(num_splits!=a;)b=contents.lastIndexOf(' ',1990*++a),results.innerHTML+='<p>'+contents.substring(c,b)+'</p>',c=b+1
+
+
+
+
+
+		let a = 0, b = 0, c = 0, d = 0;
+		d = new RegExp('\.\n', 'g');
+
+		text.value = '----------------------------------------------------------------------------------------------------------------------------\n';
+
+
+		while (contents.substring(b, contents.length).length > 1990) {
+			b = contents.lastIndexOf(' ', 1990 * ++a);
+
+			console.log("B = " + b + "\nA = " + a + "\nTILL_END = " + contents.substring(b, contents.length).length + "\n");
+
+			b++;
+
+			text.value += contents.substring(c, b) + '\n----------------------------------------------------------------------------------------------------------------------------\n';
+			//			results.innerHTML+='<p>'+contents.substring(c,b)+'<br></p>';
+
+			c = b;
+		}
+		if (contents.substring(c, contents.length).length <= 1990) {
+
+			text.value += contents.substring(c, contents.length) + '\n----------------------------------------------------------------------------------------------------------------------------\n';
+		}
+
+
+
+
+
+
+	}
+
+
+	function newline() {
+		contents = text.value;
+		store(contents);
+		num_splits = Math.ceil(contents.length / 1990);
+
+
+
+		let a = 0, b = 0, c = 0, d = 0;
+		d = new RegExp('\n', 'g');
+
+		text.value = '----------------------------------------------------------------------------------------------------------------------------\n';
+		while (contents.substring(b, contents.length).length > 1990) {
+			b = contents.lastIndexOf('\n', 1990 * ++a);
+
+			console.log("B = " + b + "\nA = " + a + "\nTILL_END = " + contents.substring(b, contents.length).length + "\n");
+
+			b++;
+
+			text.value += contents.substring(c, b) + '\n----------------------------------------------------------------------------------------------------------------------------\n';
+			//			results.innerHTML+='<p>'+contents.substring(c,b)+'<br></p>';
+
+			c = b;
+		}
+		if (contents.substring(c, contents.length).length <= 1990) {
+
+			text.value += contents.substring(c, contents.length) + '\n----------------------------------------------------------------------------------------------------------------------------\n';
+		}
+
+
+	}
+
+
+
+	function store(str) {
+
+		old[yes] = str;
+		yes++;
+	}
+
+	function shid() {
+		contents = text.value;
+		store(contents);
+		num_splits = Math.ceil(contents.length / 1990);
+
+
+
+		let a = 0, b = 0, c = 0, d = 0;
+		d = new RegExp('\.', 'g');
+
+		//			text.value = '\n';
+
+		text.value = '----------------------------------------------------------------------------------------------------------------------------\n';
+		while (contents.substring(b, contents.length).length > 1990) {
+			b = contents.lastIndexOf('\. ', 1990 * ++a);
+
+			console.log("B = " + b + "\nA = " + a + "\nTILL_END = " + contents.substring(b, contents.length).length + "\n");
+
+			b++;
+
+			text.value += contents.substring(c, b) + '\n----------------------------------------------------------------------------------------------------------------------------\n';
+			//			results.innerHTML+='<p>'+contents.substring(c,b)+'<br></p>';
+
+			c = b;
+		}
+		if (contents.substring(c, contents.length).length <= 1990) {
+
+			text.value += contents.substring(c, contents.length) + '\n----------------------------------------------------------------------------------------------------------------------------\n';
+		}
+
+
+	}
+
+
+
+
+	function lastspoil() {
+		contents = text.value;
+		store(contents);
+		num_splits = Math.ceil(contents.length / 1990);
+
+
+
+		let a = 0, b = 0, c = 0, d = 0;
+		d = new RegExp('\.', 'g');
+
+		//			text.value = '\n';
+
+		text.value = '||\n';
+
+
+		while (contents.substring(b, contents.length).length > 1990) {
+			b = contents.lastIndexOf('\.\n', 1990 * ++a);
+
+			console.log("B = " + b + "\nA = " + a + "\nTILL_END = " + contents.substring(b, contents.length).length + "\n");
+
+			b++;
+
+			text.value += contents.substring(c, b) + '\n||\n||\n';
+			//			results.innerHTML+='<p>'+contents.substring(c,b)+'<br></p>';
+
+			c = b;
+		}
+
+
+		if (contents.substring(c, contents.length).length <= 1990) {
+
+			text.value += contents.substring(c, contents.length) + '\n||\n';
+		}
+
+
+	}
+
+
+
+	function god() {
+		contents = text.value;
+		store(contents);
+		num_splits = Math.ceil(contents.length / 1990);
+
+
+
+		let a = 0, b = 0, c = 0, d = 0;
+		d = new RegExp('\.', 'g');
+
+		//			text.value = '\n';
+
+		text.value = '||\n';
+
+
+		while (contents.substring(b, contents.length).length > 1990) {
+			b = contents.lastIndexOf('\.\n', 1990 * ++a);
+
+			console.log("B = " + b + "\nA = " + a + "\nTILL_END = " + contents.substring(b, contents.length).length + "\n");
+
+			b++;
+
+			text.value += contents.substring(c, b) + '\n||\n||\n';
+			//			results.innerHTML+='<p>'+contents.substring(c,b)+'<br></p>';
+
+			c = b;
+		}
+		if (contents.substring(c, contents.length).length <= 1990) {
+
+			text.value += contents.substring(c, contents.length) + '\n||\n';
+
+		}
+
+
+	}
+
+
+	function newspoil() {
+		contents = text.value;
+		store(contents);
+		//old = contents;
+		num_splits = Math.ceil(contents.length / 1990);
+
+
+
+		let a = 0, b = 0, c = 0, d = 0;
+		d = new RegExp('\n', 'g');
+
+		text.value = '||\n';
+		while (contents.substring(b, contents.length).length > 1990) {
+			b = contents.lastIndexOf('\.\n', 1990 * ++a);
+
+			console.log("C = " + c + "\nB = " + b + "\nA = " + a + "\nTILL_END = " + contents.substring(b, contents.length).length + "\n");
+
+
+
+			b++;
+			text.value += contents.substring(c, b) + '\n||\n||\n';
+			//			results.innerHTML+='<p>'+contents.substring(c,b)+'<br></p>';
+
+			c = b;
+		}
+		if (contents.substring(c, contents.length).length <= 1990) {
+			console.log("C = " + c + "\n");
+			text.value += contents.substring(c, contents.length) + '\n||\n';
+
+
+		}
+
+
+
+	}
+
+	function split_it() {
+		contents = text.value;
+		store(contents);
+		//old = contents;
+		num_splits = Math.ceil(contents.length / 1990);
+
+
+
+		let a = 0, b = 0, c = 0, d = 0;
+		d = new RegExp('\.\n', 'g');
+
+		text.value = '||\n';
+
+		while (contents.substring(b, contents.length).length > 1990) {
+			b = contents.lastIndexOf('\.\n', 1990 * ++a);
+
+			console.log("B = " + b + "\nA = " + a + "\nTILL_END = " + contents.substring(b, contents.length).length + "\n");
+
+			b++;
+			text.value += contents.substring(c, b) + '\n||\n||\n';
+
+
+			//			text.value += contents.substring(c,b)+'\n||\n||\n';
+			//			results.innerHTML+='<p>'+contents.substring(c,b)+'<br></p>';
+
+			c = b;
+		}
+		if (contents.substring(c, contents.length).length <= 1990) {
+			text.value += contents.substring(c, contents.length) + '\n||\n';
+
+			//		
+		}
+
+
+	}
+</script>
+
+</html>
